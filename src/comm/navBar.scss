@@ -1,0 +1,37 @@
+//Created by lollipop 2018/8/31
+.global-header {
+  height:80px;
+  line-height: 80px;
+  background-color: rgba(0, 0, 0, 0.6);
+  .layui-nav {
+    background-color: transparent;
+    * {
+      font-size: 16px;
+    }
+    .layui-nav-item {
+      line-height: 80px;
+      a:hover {
+        color: #00b9fe;
+      }
+    }
+    .layui-this {
+      a {
+        color: #00b9fe;
+      }
+      &:after {
+        background-color: transparent;
+        height: 0;
+      }
+    }
+    .layui-nav-more {
+      opacity: 0;
+    }
+  }
+  .layui-nav-child {
+    top: 85px;
+  }
+  .layui-nav-bar {
+    background-color: transparent;
+    height: 0;
+  }
+}

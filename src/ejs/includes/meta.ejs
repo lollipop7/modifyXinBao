@@ -1,0 +1,12 @@
+<!--created by lollipop 2018/8/31-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>
+    <% for(var i=0, len=dataJson.titleArr.length; i<len; i++) { %>
+    <% if(dataJson.titleArr[i].key == dataJson.filename){ %>
+    <%= dataJson.titleArr[i].name %>
+    <% } %>
+    <% } %>
+</title>
+<link rel="stylesheet" href="../vendor/layui-src/css/layui.css">
