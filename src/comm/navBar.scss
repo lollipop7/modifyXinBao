@@ -3,6 +3,25 @@
   height:80px;
   line-height: 80px;
   background-color: rgba(0, 0, 0, 0.6);
+  .nav-logo {
+    h1 {
+      a {
+        display: block;
+        width: 303px;
+        background: url(../images/nav-logo.png) no-repeat left center;
+        text-indent: -150px;
+        overflow: hidden;
+      }
+    }
+  }
+  .btn-contactus {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 32px;
+    background: #0093fb linear-gradient(to right, #00c5ff, #0093fb);
+    border-radius: 40px;
+    font-weight: bold;
+  }
   .layui-nav {
     background-color: transparent;
     * {
@@ -10,6 +29,7 @@
     }
     .layui-nav-item {
       line-height: 80px;
+      font-weight: bold;
       a:hover {
         color: #00b9fe;
       }
@@ -29,6 +49,7 @@
   }
   .layui-nav-child {
     top: 85px;
+    font-weight: normal;
   }
   .layui-nav-bar {
     background-color: transparent;
