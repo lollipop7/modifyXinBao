@@ -3,34 +3,37 @@
     <div class="nav-container clearfix">
         <div class="nav-logo pull-left">
             <h1>
-                <a href="javascript:void(0)">9151薪宝</a>
+                <a href="./index.html)">9151薪宝</a>
             </h1>
         </div>
         <div class="nav-modal pull-right"><button class="layui-btn btn-contactus">联系我们</button></div>
-        <ul class="layui-nav nav-list pull-right">
-           <li class="layui-nav-item layui-this"><a href="javascript:void(0)">首页</a></li>
-           <li class="layui-nav-item">
-               <a href="javascript:void(0)">企业福利方案</a>
-               <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                   <dd><a href="javascript:void(0)">弹性福利</a></dd>
-                   <dd><a href="javascript:void(0)">员工体检</a></dd>
-                   <dd><a href="javascript:void(0)">保险服务</a></dd>
-                   <dd><a href="javascript:void(0)">年节产品</a></dd>
-                   <dd><a href="javascript:void(0)">员工激励</a></dd>
-                   <dd><a href="javascript:void(0)">会展服务</a></dd>
-               </dl>
-           </li>
-            <li class="layui-nav-item">
-                <a href="javascript:void(0)">人力资源服务</a>
+        <ul class="layui-nav pull-right" id="nav-list">
+            <li class="layui-nav-item" data-key="index"><a href="./index.html">首页</a></li>
+            <li class="layui-nav-item" id="corp_welfare" data-key="corp_welfare">
+                <a href="./corp_welfare.html">企业福利方案</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                    <dd><a href="javascript:void(0)">招聘&广告</a></dd>
-                    <dd><a href="javascript:void(0)">51招聘云</a></dd>
-                    <dd><a href="javascript:void(0)">AI机器人</a></dd>
-                    <dd><a href="javascript:void(0)">咨询服务</a></dd>
+                    <dd><a href="./corp_welfare.html#flex_benifit">弹性福利</a></dd>
+                    <dd><a href="./corp_welfare.html#staff_ME">员工体检</a></dd>
+                    <dd><a href="./corp_welfare.html#insurance">保险服务</a></dd>
+                    <dd><a href="./corp_welfare.html#festival_prc">年节产品</a></dd>
+                    <dd><a href="./corp_welfare.html#staff_incent">员工激励</a></dd>
+                    <dd><a href="./corp_welfare.html#exhibition">会展服务</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="javascript:void(0)">关于我们</a></li>
+            <li class="layui-nav-item" id="hr_service" data-key="hr_service">
+                <a href="./AI.html">人力资源服务</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="./recruit_ad.html">招聘&广告</a></dd>
+                    <dd><a href="http://www.51jrq.com/topics/51cloud/">51招聘云</a></dd>
+                    <dd><a href="./AI.html">AI机器人</a></dd>
+                    <dd><a href="./advice.html">咨询服务</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item" data-key="staff_incent"><a href="http://www.9151fubao.com/">福宝商城</a></li>
+            <li class="layui-nav-item" data-key="about_us"><a href="javascript:void(0)">关于我们</a></li>
         </ul>
 
     </div>
 </div>
+<% include ./contact.ejs %>
+<div class="icon-gotop"></div>

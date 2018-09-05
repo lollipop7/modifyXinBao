@@ -1,1 +1,79 @@
 <!--created by lollipop 2018/8/31-->
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <% include ../includes/meta.ejs %>
+    <link rel="stylesheet" href="../css/corp_welfare.css">
+</head>
+<body>
+    <!--轮播 start-->
+    <div class="banner-wrap">
+        <% include ../includes/navBar.ejs %>
+        <div class="layui-carousel" id="banner-carousel">
+            <ul carousel-item>
+                <li style="background: url(../images/corp_welfare/banner1.jpg) no-repeat center center"></li>
+                <li style="background: url(../images/corp_welfare/banner2.jpg) no-repeat center center"></li>
+                <li style="background: url(../images/corp_welfare/banner3.jpg) no-repeat center center"></li>
+            </ul>
+        </div>
+    </div>
+    <!--轮播 end-->
+    <!--tab 切换 start-->
+    <div class="tab-wrap" id="tabs">
+        <div class="layui-tab layui-tab-brief">
+            <ul class="layui-tab-title">
+                <li data-tab="flex_benifit" class="layui-this">
+                    <i class="icon"></i>
+                    <p>弹性福利</p>
+                </li>
+                <li data-tab="staff_ME">
+                    <i class="icon"></i>
+                    <p>员工体检</p>
+                </li>
+                <li data-tab="insurance">
+                    <i class="icon"></i>
+                    <p>保险服务</p>
+                </li>
+                <li data-tab="festival_prc">
+                    <i class="icon"></i>
+                    <p>年节产品</p>
+                </li>
+                <li data-tab="staff_incent">
+                    <i class="icon"></i>
+                    <p>员工激励</p>
+                </li>
+                <li data-tab="exhibition">
+                    <i class="icon"></i>
+                    <p>会展服务</p>
+                </li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <% include ./tab-item1.ejs %>
+                </div>
+                <div class="layui-tab-item">
+                    <% include ./tab-item2.ejs %>
+                </div>
+                <div class="layui-tab-item">
+                    <% include ./tab-item3.ejs %>
+                </div>
+                <div class="layui-tab-item">
+                    <% include ./tab-item4.ejs %>
+                </div>
+                <div class="layui-tab-item">
+                    <% include ./tab-item5.ejs %>
+                </div>
+                <div class="layui-tab-item">
+                    <% include ./tab-item6.ejs %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--tab 切换 end-->
+    <% include ../includes/footerBar.ejs %>
+    <script src="../vendor/layui-src/layui.js"></script>
+    <script src="../js/navbar-footer.js" type="text/javascript"></script>
+    <script src="../js/corp_welfare.js" type="text/javascript"></script>
+</body>
+</html>

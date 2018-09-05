@@ -12,11 +12,12 @@ const fs = require('fs'),
     scriptDir = join(srcDir, 'script'),
     distDir = join(__dirname, 'dist'),
     mainDir = join(distDir, 'mainDir'),
+    hrServiceDir = join(distDir, 'hrServiceDir'),
     _ = require('lodash');
 
-const mainPages = ['index', 'corp_welfare', 'hr_service', 'fubao_mall', 'about_us'];
+const mainPages = ['index', 'corp_welfare', 'hr_service', 'about_us'];
 const welfarePages = ['flex_benifit', 'staff_ME', 'insurance', 'festival_prc', 'staff_incent', 'exhibition'];
-const hrServicePages = ['recruit_ad', 'yun_recruit', 'AI', 'advice'];
+const hrServicePages = ['recruit_ad', 'AI', 'advice'];
 
 //compile ejs to html
 gulp.task('maintpl', () => {
@@ -44,6 +45,34 @@ gulp.task('maintpl', () => {
 //compile watch
 gulp.task('maintpl:watch', () => {
     gulp.watch(join(ejsDir, `**/*.ejs`), ['maintpl']);
+});
+
+//compile ejs to html
+gulp.task('hrServicetpl', () => {
+    hrServicePages.forEach((item)=>{
+        //需要制定编码方式，否则返回原生buffer
+        let templateStr = fs.readFileSync(join(ejsDir, `${item}/${item}.ejs`), 'utf8');
+        let htmlTemplate = ejs.render(templateStr, {
+            filename: join(ejsDir, `${item}/${item}.ejs`),
+            dataJson: _.extend({}, require(join(srcDir, `data/dataJson.js`)), {filename: item})
+        });
+        if(!fs.existsSync(mainDir)){
+            fs.mkdirSync(mainDir)
+        }else{
+            fs.writeFile(join(mainDir, `${item}.html`),
+                htmlTemplate, err=>{
+                    if(err) throw new Error(err);
+                    console.log(`${item} is saved !`);
+                }
+            )
+        }
+
+    })
+});
+
+//compile watch
+gulp.task('hrServicetpl:watch', () => {
+    gulp.watch(join(ejsDir, `**/*.ejs`), ['hrServicetpl']);
 });
 
 //compile sass to css
@@ -93,3 +122,4 @@ gulp.task('js:watch', () => {
 });
 
 gulp.task('mainws', ['maintpl:watch', 'scss:watch', 'js:watch', 'base64:watch'], () => {});
+gulp.task('hrServicetplws', ['hrServicetpl:watch', 'scss:watch', 'js:watch', 'base64:watch'], () => {});

@@ -35,7 +35,7 @@
       }
     }
     .layui-this {
-      a {
+      &>a {
         color: #00b9fe;
       }
       &:after {
@@ -50,9 +50,118 @@
   .layui-nav-child {
     top: 85px;
     font-weight: normal;
+    dd.layui-this {
+      a {
+        background-color: #fff;
+        color: #00b9fe;
+      }
+    }
   }
   .layui-nav-bar {
     background-color: transparent;
     height: 0;
   }
+}
+.form-fill,
+.form-succ {
+  display: none;
+}
+.page-form-wrapper {
+  min-width: 500px;
+  .form-fill {
+    display: block;
+    margin: 40px 40px 20px;
+    form {
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #d2d2d2;
+        opacity:1;
+      }
+
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #d2d2d2;
+        opacity:1;
+      }
+
+      input:-ms-input-placeholder{
+        color: #d2d2d2;
+        opacity:1;
+      }
+
+      input::-webkit-input-placeholder{
+        color: #d2d2d2;
+        opacity:1;
+      }
+
+      textarea:-ms-input-placeholder{
+        color: #d2d2d2;
+        opacity:1;
+      }
+
+      textarea::-webkit-input-placeholder{
+        color: #d2d2d2;
+        opacity:1;
+      }
+      .layui-input {
+        border-radius: 100px;
+      }
+      .submit-btn {
+        padding: 0 76px;
+        background: #0093fb linear-gradient(to right, #00c5ff, #0093fb);
+        border-radius: 40px;
+        font-weight: bold;
+      }
+    }
+    .tel {
+      margin-bottom: 28px;
+      text-align: center;
+      font-size: 16px;
+      color: #656565;
+      span {
+        color: #0093fb;
+      }
+    }
+  }
+}
+.form-succ-wrapper {
+  min-width: 530px;
+  .form-succ {
+    display: block;
+    padding-top: 40px;
+    padding-left: 46px;
+    padding-right: 46px;
+    .icon-gou {
+      text-align: center;
+      h3 {
+        margin: 8px 0 20px 0;
+        font-size: 26px;
+        color: #666;
+      }
+    }
+    p {
+      line-height: 28px;
+      font-size: 14px;
+      color: #888;
+    }
+  }
+  .layui-layer-btn {
+    padding-bottom: 20px;
+    .layui-layer-btn0 {
+      border-radius: 20px;
+      border-color: #d2d2d2;
+      background-color: #ffffff;
+      color: #d2d2d2;
+    }
+  }
+}
+.icon-gotop {
+  position: fixed;
+  right: 0px;
+  bottom: 20%;
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url(../images/top.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }

@@ -1,1 +1,752 @@
 <!--created by lollipop 2018/8/31-->
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <!--created by lollipop 2018/8/31-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>
+    
+        
+    
+        
+            企业福利方案
+        
+    
+        
+    
+        
+    
+        
+    
+</title>
+<link rel="stylesheet" href="../vendor/layui-src/css/layui.css">
+    <link rel="stylesheet" href="../css/corp_welfare.css">
+</head>
+<body>
+    <!--轮播 start-->
+    <div class="banner-wrap">
+        <!--created by lollipop 2018/8/31-->
+<div class="global-header">
+    <div class="nav-container clearfix">
+        <div class="nav-logo pull-left">
+            <h1>
+                <a href="./index.html)">9151薪宝</a>
+            </h1>
+        </div>
+        <div class="nav-modal pull-right"><button class="layui-btn btn-contactus">联系我们</button></div>
+        <ul class="layui-nav pull-right" id="nav-list">
+            <li class="layui-nav-item" data-key="index"><a href="./index.html">首页</a></li>
+            <li class="layui-nav-item" id="corp_welfare" data-key="corp_welfare">
+                <a href="./corp_welfare.html">企业福利方案</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="./corp_welfare.html#flex_benifit">弹性福利</a></dd>
+                    <dd><a href="./corp_welfare.html#staff_ME">员工体检</a></dd>
+                    <dd><a href="./corp_welfare.html#insurance">保险服务</a></dd>
+                    <dd><a href="./corp_welfare.html#festival_prc">年节产品</a></dd>
+                    <dd><a href="./corp_welfare.html#staff_incent">员工激励</a></dd>
+                    <dd><a href="./corp_welfare.html#exhibition">会展服务</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item" id="hr_service" data-key="hr_service">
+                <a href="./AI.html">人力资源服务</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="./recruit_ad.html">招聘&广告</a></dd>
+                    <dd><a href="http://www.51jrq.com/topics/51cloud/">51招聘云</a></dd>
+                    <dd><a href="./AI.html">AI机器人</a></dd>
+                    <dd><a href="./advice.html">咨询服务</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item" data-key="staff_incent"><a href="http://www.9151fubao.com/">福宝商城</a></li>
+            <li class="layui-nav-item" data-key="about_us"><a href="javascript:void(0)">关于我们</a></li>
+        </ul>
+
+    </div>
+</div>
+<!--created by lollipop 2018/9/5-->
+<div class="form-fill" id="form-fill">
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <input type="text" name="companyname" required  lay-verify="required" placeholder="企业名称" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item">
+            <input type="text" name="indutry" required  lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item">
+            <input type="text" name="username" placeholder="姓名" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item">
+            <input type="text" name="phonenumber" placeholder="电话" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item" style="text-align: center;">
+            <button class="layui-btn submit-btn" lay-submit lay-filter="formContactus">提交</button>
+        </div>
+    </form>
+    <div class="tel">或拨打 <span>400-8856-112</span> 了解更多信息</div>
+</div>
+<div class="form-succ" id="form-succ">
+    <div class="icon-gou">
+        <img src="/img/fixedPlugin/gou.png" alt="信息提交成功">
+        <h3>信息提交成功</h3>
+    </div>
+    <p>您的信息已成功提交到公司后台，我们会尽快安排专业顾问与您联系，非常感谢您的配合，祝您生活愉快！</p>
+</div>
+<div class="icon-gotop"></div>
+        <div class="layui-carousel" id="banner-carousel">
+            <ul carousel-item>
+                <li style="background: url(../images/corp_welfare/banner1.jpg) no-repeat center center"></li>
+                <li style="background: url(../images/corp_welfare/banner2.jpg) no-repeat center center"></li>
+                <li style="background: url(../images/corp_welfare/banner3.jpg) no-repeat center center"></li>
+            </ul>
+        </div>
+    </div>
+    <!--轮播 end-->
+    <!--tab 切换 start-->
+    <div class="tab-wrap" id="tabs">
+        <div class="layui-tab layui-tab-brief">
+            <ul class="layui-tab-title">
+                <li data-tab="flex_benifit" class="layui-this">
+                    <i class="icon"></i>
+                    <p>弹性福利</p>
+                </li>
+                <li data-tab="staff_ME">
+                    <i class="icon"></i>
+                    <p>员工体检</p>
+                </li>
+                <li data-tab="insurance">
+                    <i class="icon"></i>
+                    <p>保险服务</p>
+                </li>
+                <li data-tab="festival_prc">
+                    <i class="icon"></i>
+                    <p>年节产品</p>
+                </li>
+                <li data-tab="staff_incent">
+                    <i class="icon"></i>
+                    <p>员工激励</p>
+                </li>
+                <li data-tab="exhibition">
+                    <i class="icon"></i>
+                    <p>会展服务</p>
+                </li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <!--created by lollipop 2018/9/4-->
+<div class="clearfix" style="padding-top: 50px; padding-bottom: 50px; background: #f8f8f8;">
+    <div style="width: 1000px; margin: 0 auto;">
+        <div class="second-wrap">
+            <div class="first-wrap">
+                <div class="first-content">
+                    <img src="../images/corp_welfare/pic_01.png" alt="">
+                </div>
+                <div class="second-content">
+                    <h2>什么是弹性福利?</h2>
+                    <div class="sub-title">一站式全方位覆盖员工消费需求场景</div>
+                    <p>
+                        弹性福利，是指企业确定对每个员工福利的投入(通常用积分形式体现)的前提下，
+                        由员工在福利菜单中选择适合自己的福利，因此也叫菜单式福利。
+                        这样企业既控制了总体成本，又使得投入的每一分钱都效用最大化。
+                        弹性福利的出现，在很大程度上解决企业成本管理和员工满意度的矛盾。
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix" style="padding-top: 50px; padding-bottom: 50px; width: 1000px; margin: 0 auto;">
+    <div class="icon-img">
+        <img src="../images/corp_welfare/icon_13.png" />
+        <div>◇大数据精准分析员工喜好</div>
+        <div>◇契合员工需求</div>
+    </div>
+    <div class="icon-img">
+        <img src="../images/corp_welfare/icon_14.png" />
+        <div>◇整合各类优质资源</div>
+        <div>◇可兼容企业原有供应商</div>
+    </div>
+    <div class="icon-img">
+        <img src="../images/corp_welfare/icon_15.png" />
+        <div>◇可根据企业预算需求</div>
+        <div>◇实现福利效益最大化</div>
+    </div>
+    <div class="icon-img">
+        <img src="../images/corp_welfare/icon_16.png" />
+        <div>◇丰富多样的自选福利</div>
+        <div>◇差异化消费场景全覆盖</div>
+    </div>
+</div>
+<div style="padding-top: 60px; text-align: center; background: #f8f8f8;">
+    <div style="width: 1000px; margin: 0 auto;">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2>服务介绍</h2>
+            <div class="subhead">覆盖多种员工消费需求场景</div>
+        </div>
+        <div class="clearfix" style="padding-top: 50px; padding-bottom: 50px;">
+            <div class="pull-left">
+                <img src="../images/corp_welfare/pic_14.jpg" alt="" style="width: 431px; height: 336px;">
+            </div>
+            <div class="pull-right">
+                <img src="../images/corp_welfare/pic_02.jpg" alt="" style="width: 553px; height: 313px;">
+            </div>
+        </div>
+    </div>
+</div>
+<div  style="padding-top: 50px; padding-bottom: 50px; width: 1000px;  margin: 0 auto; text-align: center;">
+    <div class="panel-head">
+        <div class="short-line layui-inline"></div>
+        <h2>服务流程</h2>
+        <div class="subhead">资金安全有保障，所有流程清晰合规合理</div>
+    </div>
+    <div  style="padding-top: 60px;">
+        <img src="../images/corp_welfare/pic_15.jpg" alt=""  style="width: 880px; height: 235px;">
+    </div>
+</div>
+                </div>
+                <div class="layui-tab-item">
+                    <!--created by lollipop 2018/9/4-->
+<div style="padding-top: 60px; text-align: center; background: #f8f8f8;">
+    <div style="width: 1200px; margin: 0 auto;">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2>精选体检推荐</h2>
+            <div class="subhead">HOT RECOMMENDATION</div>
+        </div>
+        <div class="clearfix" style="padding-top: 60px;">
+            <div class="tijian-item">
+                <i class="icon-title qiye"></i>
+                <img src="../images/corp_welfare/tijian1.png" alt="">
+                <h3>经典新员工体检套餐</h3>
+                <p class="sale">￥256.00起</p>
+            </div>
+            <div class="tijian-item">
+                <i class="icon-title qiye"></i>
+                <img src="../images/corp_welfare/tijian2.png" alt="">
+                <h3>白领精英套餐</h3>
+                <p class="sale">￥780.00起</p>
+            </div>
+            <div class="tijian-item">
+                <i class="icon-title nvxing"></i>
+                <img src="../images/corp_welfare/tijian3.png" alt="">
+                <h3>华美丽人女性套餐</h3>
+                <p class="sale">￥498.00起</p>
+            </div>
+            <div class="tijian-brand">
+                <img src="../images/corp_welfare/tijian-1.jpg" alt="">
+                <img src="../images/corp_welfare/tijian-2.jpg" alt="">
+            </div>
+        </div>
+        <div class="learn-more">
+            <a href="javascript:void(0)" class="default-btn" id="openForm1">了解更多</a>
+        </div>
+    </div>
+</div>
+<div style="padding-top: 60px; text-align: center;">
+    <div style="width: 1000px; margin: 0 auto;">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2>服务介绍</h2>
+            <div class="subhead">中小型企业定制体检首选</div>
+        </div>
+        <div class="clearfix" style="padding-top: 50px; padding-bottom: 50px;">
+            <div class="pull-left">
+                <div class="tijian-list">
+                    <img src="../images/corp_welfare/tijian6-l.png" alt="" style="width: 373px; height: 321px;">
+                    <a href="javascript:void(0)" class="default-btn trans-btn"  id="openForm2"></a>
+                </div>
+            </div>
+            <div class="pull-right">
+                <img src="../images/corp_welfare/pic_02.jpg" alt="" style="width: 550px; height: 323px;">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ourpro">
+    <div style="padding-top: 50px; padding-bottom: 50px; width: 1000px; margin: 0 auto; text-align: center">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2><span>员工健康</span>好产品</h2>
+            <div class="subhead">9151薪宝，省时、省心、省开支、服务好、员工的健康管家</div>
+        </div>
+        <div style="padding-top: 40px; padding-bottom: 30px;">
+            <p>*我们的体检价格远低于自信采购，部分项目还送健康服务</p>
+            <p>*员工商业保险服务，对接多家优质保险服务商</p>
+            <p>*提供员工健康风险评估、报告解读、专家咨询、提供健康报告</p>
+            <p>*健康福利可打包进整体福利中，减轻HR负担</p>
+            <p>*家属共享员工优惠价</p>
+        </div>
+        <div class="clearfix">
+            <div class="icon-img">
+                <img src="../images/corp_welfare/tijian8.png" />
+                <div>专注企业健康、员工体检</div>
+                <div>有众多特大型企业体检服务案例</div>
+            </div>
+            <div class="icon-img">
+                <img src="../images/corp_welfare/tijian9.png" />
+                <div>套餐可在线升级、加项</div>
+                <div>企业与体检预约系统对接</div>
+            </div>
+            <div class="icon-img">
+                <img src="../images/corp_welfare/tijian10.png" />
+                <div>拥有专业的技术与创新的团队</div>
+                <div>资深客服坐席为您服务</div>
+            </div>
+            <div class="icon-img">
+                <img src="../images/corp_welfare/tijian11.png" />
+                <div>与国内主流体检机构</div>
+                <div>三甲、二甲医院深度合作</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--进一步了解产品 start-->
+<!--created by lollipop 2018/9/3-->
+<div class="better_understand">
+    <div class="panel-head">
+        <div class="short-line layui-inline"></div>
+        <h2>进一步了解产品</h2>
+        <div class="subhead">contact us</div>
+    </div>
+    <div class="layui-form">
+        <ul>
+            <li>
+                <div class="layui-inline">
+                    <input type="text" name="companyname" required lay-verify="required" placeholder="企业名称" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-inline">
+                    <input type="text" name="indutry" required lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
+                </div>
+            </li>
+            <li>
+                <div class="layui-inline">
+                    <input type="text" name="username" required lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-inline">
+                    <input type="text" name="phonenumber" required lay-verify="required" placeholder="电话" autocomplete="off" class="layui-input">
+                </div>
+            </li>
+        </ul>
+        <div>
+            <button class="layui-btn" lay-submit lay-filter="formContactus">提交</button>
+        </div>
+    </div>
+</div>
+<!--进一步了解产品 end-->
+                </div>
+                <div class="layui-tab-item">
+                    <!--created by lollipop 2018/9/5-->
+<div style="padding-top: 60px; text-align: center; background: #f8f8f8;">
+    <div style="width: 1200px; margin: 0 auto;">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2>精选体检推荐</h2>
+            <div class="subhead">HOT RECOMMENDATION</div>
+        </div>
+        <div class="clearfix" style="padding-top: 60px;">
+            <div class="baoxian-item">
+                <img src="../images/corp_welfare/baoxian1.png" alt="">
+                <h3>企业团体综合意外险</h3>
+                <p class="sub-title">为企业员工设计的保险，3人起投</p>
+                <p class="sale">￥25.00/人起</p>
+            </div>
+            <div class="baoxian-item">
+                <img src="../images/corp_welfare/baoxian2.png" alt="">
+                <h3>团体短期综合意外险</h3>
+                <p class="sub-title">团体短期工作、活动最佳保障，5人起投</p>
+                <p class="sale">￥5.00/人起</p>
+            </div>
+            <div class="baoxian-item">
+                <img src="../images/corp_welfare/baoxian3.png" alt="">
+                <h3>团体国内旅游保险</h3>
+                <p class="sub-title">专为公司旅游定制的保险服务</p>
+                <p class="sale">￥7.00/人起</p>
+            </div>
+            <div class="baoxian-item">
+                <img src="../images/corp_welfare/baoxian3.png" alt="">
+                <h3>团体交通意外险</h3>
+                <p class="sub-title">飞机、火车、大巴、私家车全都保</p>
+                <p class="sale">￥10.00/人起</p>
+            </div>
+        </div>
+        <div class="learn-more">
+            <a href="javascript:void(0)" class="default-btn" id="openForm3">了解更多</a>
+        </div>
+    </div>
+</div>
+<div style="padding-top: 50px; padding-bottom: 50px; text-align: center;">
+    <div style="width: 1200px; margin: 0 auto;">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2>精选体检推荐</h2>
+            <div class="subhead">HOT RECOMMENDATION</div>
+        </div>
+        <div class="clearfix" style="padding-top: 60px;">
+            <div class="ser-item">
+                <img src="../images/corp_welfare/baoxian5.png" alt="">
+                <h3>定制保险</h3>
+                <p class="sub-title">综合规划保障</p>
+                <p class="sub-title">专业定制保险方案</p>
+            </div>
+            <div class="ser-item">
+                <img src="../images/corp_welfare/baoxian6.png" alt="">
+                <h3>金牌顾问</h3>
+                <p class="sub-title">全程投保指导</p>
+                <p class="sub-title">省时又省心</p>
+            </div>
+            <div class="ser-item">
+                <img src="../images/corp_welfare/baoxian7.png" alt="">
+                <h3>推荐产品</h3>
+                <p class="sub-title">专业方案配置</p>
+                <p class="sub-title">高性价比产品</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ourpro">
+    <div style="padding-top: 50px; padding-bottom: 50px; width: 1000px; margin: 0 auto; text-align: center">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2><span>员工健康</span>好产品</h2>
+            <div class="subhead">9151薪宝，省时、省心、省开支、服务好、员工的健康管家</div>
+        </div>
+        <div style="padding-top: 40px; padding-bottom: 30px;">
+            <p>*我们的体检价格远低于自信采购，部分项目还送健康服务</p>
+            <p>*员工商业保险服务，对接多家优质保险服务商</p>
+            <p>*提供员工健康风险评估、报告解读、专家咨询、提供健康报告</p>
+            <p>*健康福利可打包进整体福利中，减轻HR负担</p>
+            <p>*家属共享员工优惠价</p>
+        </div>
+        <div class="clearfix">
+            <div class="icon-img">
+                <img src="../images/corp_welfare/tijian8.png" />
+                <div>专注企业健康、员工体检</div>
+                <div>有众多特大型企业体检服务案例</div>
+            </div>
+            <div class="icon-img">
+                <img src="../images/corp_welfare/tijian9.png" />
+                <div>套餐可在线升级、加项</div>
+                <div>企业与体检预约系统对接</div>
+            </div>
+            <div class="icon-img">
+                <img src="../images/corp_welfare/tijian10.png" />
+                <div>拥有专业的技术与创新的团队</div>
+                <div>资深客服坐席为您服务</div>
+            </div>
+            <div class="icon-img">
+                <img src="../images/corp_welfare/tijian11.png" />
+                <div>与国内主流体检机构</div>
+                <div>三甲、二甲医院深度合作</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--进一步了解产品 start-->
+<!--created by lollipop 2018/9/3-->
+<div class="better_understand">
+    <div class="panel-head">
+        <div class="short-line layui-inline"></div>
+        <h2>进一步了解产品</h2>
+        <div class="subhead">contact us</div>
+    </div>
+    <div class="layui-form">
+        <ul>
+            <li>
+                <div class="layui-inline">
+                    <input type="text" name="companyname" required lay-verify="required" placeholder="企业名称" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-inline">
+                    <input type="text" name="indutry" required lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
+                </div>
+            </li>
+            <li>
+                <div class="layui-inline">
+                    <input type="text" name="username" required lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-inline">
+                    <input type="text" name="phonenumber" required lay-verify="required" placeholder="电话" autocomplete="off" class="layui-input">
+                </div>
+            </li>
+        </ul>
+        <div>
+            <button class="layui-btn" lay-submit lay-filter="formContactus">提交</button>
+        </div>
+    </div>
+</div>
+<!--进一步了解产品 end-->
+                </div>
+                <div class="layui-tab-item">
+                    <!--created by lollipop 2018/9/5-->
+<div class="clearfix" style="padding-top: 50px; padding-bottom: 50px; background: #f8f8f8;">
+    <div style="width: 1000px; margin: 0 auto;">
+        <div class="second-wrap">
+            <div class="first-wrap">
+                <div class="first-content">
+                    <img src="../images/corp_welfare/pic_02.png" alt="">
+                </div>
+                <div class="second-content">
+                    <h2>年节福利</h2>
+                    <div class="sub-title">让企业让福利更专业 更便捷</div>
+                    <p>
+                        致力于企业时令节日福利、客户回馈计划等，专为企业提供全方位、多元化的节日福利、礼赠品综合解决方案，
+                        包括标准套餐和定制服务。帮助企业在有无预算状态下，解决员工福利的筛选、发放、管理、满意度等难题。。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="service_adv">
+    <h2>我们的服务优势</h2>
+    <div class="clearfix">
+        <div class="icon-img2">
+            <img src="../images/corp_welfare/icon_13.png">
+            <div class="right-img2">
+                <div class="word1">大数据支持</div>
+                <div class="word2">大数据精准分析员工喜好<br>契合员工中秋福利需求</div>
+            </div>
+        </div>
+        <div class="icon-img2" style="float:right">
+            <img src="../images/corp_welfare/icon_13.png">
+            <div class="right-img2">
+                <div class="word1">优质产品</div>
+                <div class="word2">丰富多样的自选福利<br>差异化消费场景全覆盖</div>
+            </div>
+        </div>
+        <div class="icon-img2">
+            <img src="../images/corp_welfare/icon_13.png">
+            <div class="right-img2">
+                <div class="word1">售后无忧</div>
+                <div class="word2">先行赔付机制，专业客服团队<br>售后48小时解决方案</div>
+            </div>
+        </div>
+        <div class="icon-img2" style="float:right">
+            <img src="../images/corp_welfare/icon_13.png">
+            <div class="right-img2">
+                <div class="word1">值得信赖</div>
+                <div class="word2">行业优领先的服务团队<br>多年的福利管理经验</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="padding-top: 60px; text-align: center;  background: #f8f8f8;">
+    <div style="width: 1012px; margin: 0 auto;">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2>服务介绍</h2>
+            <div class="subhead">覆盖多种员工消费需求场景</div>
+        </div>
+        <div class="clearfix" style="padding-top: 50px; padding-bottom: 50px;">
+            <div class="pull-left">
+                <div class="tijian-list">
+                    <img src="../images/corp_welfare/pic_17.jpg" alt="" style="width: 431px; height: 336px;">
+                    <a href="javascript:void(0)" class="default-btn trans-btn"></a>
+                </div>
+            </div>
+            <div class="pull-right">
+                <img src="../images/corp_welfare/pic_16.jpg" alt="" style="width: 580px; height: 328px;">
+            </div>
+        </div>
+    </div>
+</div>
+<div  style="padding-top: 50px; padding-bottom: 50px; width: 1000px;  margin: 0 auto; text-align: center;">
+    <div class="panel-head">
+        <div class="short-line layui-inline"></div>
+        <h2>企业定制服务</h2>
+        <div class="subhead">我们可根据节日特点和企业预算以及需求</div>
+        <div class="subhead">定制企业专属的员工福利产品方案</div>
+    </div>
+    <div  style="padding-top: 60px;">
+        <img src="../images/corp_welfare/pic_18.jpg" alt=""  style="width: 880px; height: 286px;">
+    </div>
+</div>
+                </div>
+                <div class="layui-tab-item">
+                    <!--created by lollipop 2018/9/5-->
+<div class="incent-way clearfix">
+    <div style="width: 1000px; margin: 0 auto;">
+        <div class="second-wrap">
+            <div class="first-wrap">
+                <div class="first-content">
+
+                </div>
+                <div class="second-content">
+                    <h2>员工激励方案</h2>
+                    <div class="sub-title">让您企业省下90%发送奖励的时间和成本！</div>
+                    <p>
+                        员工激励是对员工的各种需要予以不同程度的满足或者限制，以激发员工的需要、动机、欲望，
+                        从而使员工形成某一特定目标并在追求这一目标的过程中保持高昂的情绪和持续的积极状态，
+                        充分挖掘潜力，全力达到预期目标的过程。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="width:1000px; margin:0 auto;">
+    <img src="../images/corp_welfare/pic_24.jpg" style="width:961px; margin:0 auto;display:block; margin-top:60px;" />
+    <div class="clearfix" style="width:961px;margin:0 auto;">
+        <div class="down-img">
+            <div class="one">大数据支持</div>
+            <div class="two">关注到每一名员工<br/>提升工作动力 </div>
+        </div>
+        <div class="down-img" style="margin-left:60px;">
+            <div class="one">创新形式</div>
+            <div class="two">打破时间、地点、层级<br/>对激励的限制</div>
+        </div>
+        <div class="down-img" style="margin-left:60px;">
+            <div class="one">HR省心</div>
+            <div class="two">可视化数据报表输出<br/>方便管理 </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix" style="padding-top: 50px; padding-bottom: 50px; background: #f8f8f8;">
+    <div style="width: 1000px; margin: 0 auto; text-align: center">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2>员工激励模式</h2>
+            <div class="subhead">互联网+员工激励新模式</div>
+        </div>
+        <div class="content-width" style="padding-top:50px; width:964px;">
+            <div class="img-box">
+                <img src="../images/corp_welfare/pic_25.jpg">
+                <div class="word" style="color: black;">
+                    <div class="inside-box">
+                        <div class="one">成就性激励</div>
+                        <div class="two">通过对员工的具体贡献即时表达认可、尊重和赏识，通过帮员工在任务中明确目标和职责，并在企业内公开的平台表达赞赏及奖励，使员工在企业中“可见”，从而收获成就感。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box" style="margin-left:40px;">
+                <img src="../images/corp_welfare/pic_26.jpg">
+                <div class="word" style="color: black;">
+                    <div class="inside-box">
+                        <div class="one">福利性激励</div>
+                        <div class="two">以员工生活中的个性化需求为核心，通过满足员工福利“人无我有，人有我优”的特点，提高员工对福利的感知，在员工吸引和保留方面有显著的作用。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="yellow-word">详询 400-8856-112</div>
+        </div>
+    </div>
+</div>
+<div style="width: 1000px; padding-top: 50px; padding-bottom: 50px; margin: 0 auto; text-align: center">
+    <div class="panel-head">
+        <div class="short-line layui-inline"></div>
+        <h2>一站式完备解决方案</h2>
+    </div>
+    <img src="../images/corp_welfare/pic_27.jpg" style="width:981px;margin:0 auto;display:block; margin-top:60px;" />
+</div>
+                </div>
+                <div class="layui-tab-item">
+                    <!--created by lollipop 2018/9/5-->
+<div class="clearfix" style="padding-top: 50px; padding-bottom: 50px; background: #f8f8f8;">
+    <div style="width: 1000px; margin: 0 auto;">
+        <div class="second-wrap">
+            <div class="first-wrap">
+                <div class="first-content">
+                    <img src="../images/corp_welfare/pic_03.png" alt="">
+                </div>
+                <div class="second-content">
+                    <h2>提供一系列中高端会展服务</h2>
+                    <div class="sub-title">方便企业开展各类活动，提供便利</div>
+                    <p>
+                        我们为广大客户提供展览展示策划、展台设计制作、特装展台搭建、企业展厅布置、
+                        大型活动策划执行、会议会场布置、巡回展览、路演、公关推广执行、会议庆典礼仪等一站式的专业服务
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix" style="padding-top: 50px; padding-bottom: 50px; width: 1000px; margin: 0 auto;">
+    <div class="icon-img">
+        <img src="../images/corp_welfare/icon_27.png" />
+        <div>强大的执行团队</div>
+        <div>及时交付</div>
+    </div>
+    <div class="icon-img">
+        <img src="../images/corp_welfare/icon_28.png" />
+        <div>实时把控制作进度</div>
+        <div>保证品质</div>
+    </div>
+    <div class="icon-img">
+        <img src="../images/corp_welfare/icon_29.png" />
+        <div>及时响应客户需求</div>
+        <div>快速而高效</div>
+    </div>
+    <div class="icon-img">
+        <img src="../images/corp_welfare/icon_30.png" />
+        <div>丰富的会展活动经验</div>
+        <div>实现您的创意</div>
+    </div>
+</div>
+<div style="padding-top: 50px; padding-bottom: 50px; background: #f8f8f8;">
+    <div style="width: 1000px; margin: 0 auto; text-align: center;">
+        <div class="panel-head">
+            <div class="short-line layui-inline"></div>
+            <h2>服务介绍</h2>
+            <div class="subhead">我们提供多种服务供您选择</div>
+        </div>
+        <div style="padding-top:50px;">
+            <div class="circle-and">
+                <div class="circle"></div>
+                <div class="word334">沙龙活动</div>
+            </div>
+            <div class="circle-and">
+                <div class="circle"></div>
+                <div class="word334">人才招聘活动</div>
+            </div>
+            <div class="circle-and">
+                <div class="circle"></div>
+                <div class="word334">高精端人才交流活动</div>
+            </div>
+            <div class="circle-and">
+                <div class="circle"></div>
+                <div class="word334" style="color:#a0a0a0">其他更多活动</div>
+            </div>
+            <div class="yellow-word">详询 400-8856-112</div>
+        </div>
+    </div>
+</div>
+<div style="width: 1000px; padding-top: 50px; padding-bottom: 50px; margin: 0 auto; text-align: center">
+    <div class="panel-head">
+        <div class="short-line layui-inline"></div>
+        <h2>以往案例</h2>
+    </div>
+    <img src="../images/corp_welfare/pic_27.jpg" style="width:981px;margin:0 auto;display:block; margin-top:60px;" />
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--tab 切换 end-->
+    <!--created by lollipop 2018/9/4-->
+<div class="footer">
+    <div class="footer_box clearfix">
+        <div class="pull-left">
+            <div class="footer_left_img">
+                <img src="../images/footer_icon01.jpg" width="108" height="40">
+            </div>
+            <p>©2017 9151xinbao.com</p>
+            <p>沪ICP备14045153号-2</p>
+        </div>
+        <div class="pull-right">
+            <div id="bottomQQ" style="height:94px;width:396px;background-image:url(../images/footer_right.jpg);">
+                <div style="padding-top: 27px;padding-right: 10px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="../vendor/layui-src/layui.js"></script>
+    <script src="../js/navbar-footer.js" type="text/javascript"></script>
+    <script src="../js/corp_welfare.js" type="text/javascript"></script>
+</body>
+</html>

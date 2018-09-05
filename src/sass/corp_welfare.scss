@@ -1,0 +1,417 @@
+//Created by lollipop 2018/9/4
+@import '../comm/global';
+@import '../comm/navBar';
+@import '../comm/footerBar';
+
+.banner-wrap {
+  width: 100%;
+  height: 450px;
+  position: relative;
+
+}
+//轮播 start
+#banner-carousel {
+  position: absolute;
+  z-index: -1;
+}
+//轮播 end
+.tab-wrap {
+  margin-top: 20px;
+  //float: left;
+  //position: relative;
+  //left: 50%;
+}
+.layui-tab {
+  //position: relative;
+  //left: -50%;
+  .layui-tab-title {
+    width: 760px;
+    margin: 20px auto;
+    height: auto;
+    border-bottom-width: 0;
+    border-bottom-style: none;
+    li {
+      min-width: 110px;
+      padding: 0 35px;
+      line-height: 20px;
+      .icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url(../images/corp_welfare/icon-01.png) no-repeat center top;
+
+      }
+      p {
+        margin-top: 10px;
+      }
+      &:first-child+li {
+        .icon {
+          background-image: url(../images/corp_welfare/icon-02.png);
+        }
+        &+li {
+          .icon {
+            background-image: url(../images/corp_welfare/icon-03.png);
+          }
+          &+li {
+            .icon {
+              background-image: url(../images/corp_welfare/icon-04.png);
+            }
+            &+li {
+              .icon {
+                background-image: url(../images/corp_welfare/icon-05.png);
+              }
+              &+li {
+                .icon {
+                  background-image: url(../images/corp_welfare/icon-06.png);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .layui-this {
+      color: #00b9fe;
+      .icon {
+        background-position:  center -40px;
+      }
+      p {
+        font-weight: bold;
+      }
+      &:after {
+        display: none;
+      }
+
+    }
+  }
+  .layui-tab-content {
+
+    margin: 0 auto;
+    .panel-head {
+      .short-line {
+        background: #F56953;
+      }
+      h2 {
+        span {
+          color: #F56953;
+        }
+      }
+    }
+    .second-wrap {
+      width: 100%;
+      float: left;
+      position: relative;
+      overflow: hidden;
+    }
+    .first-wrap {
+      width: 100%;
+      float: left;
+      position: relative;
+      right: 620px;
+    }
+    .first-content {
+      float: left;
+      position: relative;
+      left: 620px;
+      width: 360px;
+      overflow: hidden;
+      min-height: 360px;
+      img {
+        width: 360px;
+        height: 360px;
+      }
+    }
+    .second-content {
+      padding-left: 100px;
+      float: left;
+      position: relative;
+      left: 620px;
+      width: 620px;
+      overflow: hidden;
+      h2 {
+        font-size: 30px;
+        font-weight: bold;
+        padding-top: 50px;
+      }
+      .sub-title {
+        font-size: 18px;
+        margin-bottom: 30px;
+        line-height: 30px;
+      }
+      p {
+        line-height: 32px;
+        font-size: 16px;
+        color: #656565;
+      }
+    }
+    .icon-img {
+      float: left;
+      width: 245px;
+      text-align: center;
+      img {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 20px;
+      }
+      line-height: 26px;
+    }
+    .tijian-item {
+      position: relative;
+      width: 280px;
+      height: 320px;
+      float: left;
+      margin-right: 10px;
+      background: #fff;
+      img {
+          width: 280px;
+          height: 240px;
+      }
+      .icon-title {
+        display: block;
+        width: 58px;
+        height: 50px;
+        position: absolute;
+        top: -8px;
+        left: 0;
+        background: url(../images/corp_welfare/tijian12-qiye.png) no-repeat center center;
+        &.nvxing {
+          background-image: url(../images/corp_welfare/tijian12-nvxing.png);
+        }
+      }
+      h3 {
+        font-weight: bold;
+        margin: 18px 0 5px 0;
+        font-size: 16px;
+      }
+      p.sale {
+        margin-top: 10px;
+        color: #F56953;
+      }
+    }
+    .tijian-brand {
+      float: right;
+      width: 324px;
+      img {
+        width: 324px;
+        height: 155px;
+      }
+    }
+    .learn-more {
+      padding-top: 60px;
+      .default-btn {
+        width: 180px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+    .tijian-list {
+      position: relative;
+      a.default-btn {
+        position: absolute;
+        width: 180px;
+        height: 40px;
+        left: 0;
+        bottom: -60px;
+        border: none;
+      }
+    }
+    .ourpro {
+      color: #fff;
+      width: 100%;
+      height: 540px;
+      background: url(../images/corp_welfare/bg3.png) no-repeat center center;
+      p {
+        font-size: 16px;
+        line-height: 28px;
+      }
+      .icon-img {
+        font-size: 12px;
+        img {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 20px;
+        }
+        line-height: 20px;
+      }
+    }
+    .service_adv {
+      margin: 0 auto;
+      width: 1000px;
+      text-align: center;
+      h2 {
+        font-size: 30px;
+        font-weight: bold;
+        padding-top: 50px;
+      }
+    }
+    .icon-img2 {
+      height: 110px;
+      width: 500px;
+      float: left;
+      margin: 50px auto;
+      padding-left: 100px;
+      img {
+        float: left;
+        width: 110px;
+        height: 110px;
+      }
+      .right-img2 {
+        float: left;
+        margin-top: 18px;
+        margin-left: 26px;
+      }
+      .word1 {
+        color: #333333;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .word2 {
+        margin-top: 4px;
+        color: #656565;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .incent-way {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background: url(../images/corp_welfare/pic_22.jpg) no-repeat center center;
+      width: 100%;
+      height: 540px;
+    }
+    .down-img {
+      width: 280px;
+      height: 150px;
+      float: left;
+      .one {
+        font-size: 18px;
+        color: #333333;
+        font-weight: bold;
+        margin-top: 30px;
+        text-align: center;
+        line-height: 32px;
+      }
+      .two {
+        font-size: 14px;
+        color: #656565;
+        text-align: center;
+        line-height: 22px;
+      }
+    }
+    .img-box {
+      overflow: hidden;
+      float: left;
+      height: 210px;
+      margin-bottom: 60px;
+      img {
+        float: left;
+      }
+      .word {
+        width: 250px;
+        height: 210px;
+        float: left;
+      }
+      .inside-box {
+        margin: 20px;
+        .one {
+          font-size: 20px;
+          font-weight: bold;
+          color: #656565;
+        }
+        .two {
+          font-size: 14px;
+          line-height: 20px;
+          margin-top: 25px;
+          color: #656565;
+        }
+      }
+    }
+    .yellow-word {
+      width: 215px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 18px;
+      color: #ff8c00;
+      margin: 50px auto;
+      border: 1px solid #ff8c00;
+      clear: both;
+      border-radius: 10px;
+    }
+    .circle-and {
+      width: 250px;
+      height: 18px;
+      overflow: hidden;
+      float: left;
+      .circle {
+        width: 12px;
+        height: 12px;
+        background: #f8f8f8;
+        border-radius: 50%;
+        float: left;
+        margin-top: 1px;
+        border: 2px solid #ff9e00;
+        margin-right: 10px;
+        margin-left: 78px;
+      }
+      .word334 {
+        font-size: 16px;
+        float: left;
+        color: #656565;
+        line-height: 18px;
+      }
+    }
+    .baoxian-item {
+      width: 290px;
+      height: 320px;
+      padding: 10px;
+      float: left;
+      margin-left: 13px;
+      background: #fff;
+      &:first-child {
+        margin-left: 0;
+      }
+      img {
+        width: 270px;
+        height: 200px;
+      }
+      h3 {
+        font-weight: bold;
+        margin: 18px 0 5px 0;
+        font-size: 16px;
+      }
+      p.sub-title {
+        color: #656565;
+      }
+      p.sale {
+        margin-top: 10px;
+        color: #F56953;
+      }
+    }
+    .ser-item {
+      width: 390px;
+      height: 400px;
+      padding: 10px;
+      float: left;
+      margin-left: 15px;
+      background: #fff;
+      box-shadow: 0 0 2px #efefef;
+      &:first-child {
+        margin-left: 0;
+      }
+      img {
+        width: 370px;
+        height: 220px;
+      }
+      h3 {
+        font-weight: bold;
+        margin: 38px 0 21px 0;
+        font-size: 16px;
+      }
+      p.sub-title {
+        line-height: 24px;
+        color: #656565;
+      }
+    }
+  }
+}

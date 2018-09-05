@@ -1,0 +1,392 @@
+//Created by lollipop 2018/9/5
+@import '../comm/global';
+@import '../comm/navBar';
+@import '../comm/footerBar';
+
+.banner-wrap {
+  width: 100%;
+  height: 450px;
+  position: relative;
+
+}
+.banner-img {
+  position: absolute;
+  z-index: -1;
+  height: 450px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  &.AI-img {
+    background: url(../images/hr_service/AI-banner.jpg) no-repeat center center;
+  }
+  &.recruit-ad-img {
+    background: url(../images/hr_service/zhaopin-banner.jpg) no-repeat center center;
+  }
+  &.advice-img {
+    background: url(../images/hr_service/zixun-banner.jpg) no-repeat center center;
+  }
+}
+.AI_wrap {
+  .panel-head {
+    .short-line {
+      background: #063E94;
+    }
+  }
+  .ser-item {
+    width: 390px;
+    height: 480px;
+    padding: 10px;
+    float: left;
+    margin-left: 15px;
+    background: #fff;
+    box-shadow: 0 0 2px #efefef;
+    &:first-child {
+      margin-left: 0;
+    }
+    img {
+      width: 370px;
+      height: 320px;
+    }
+    h3 {
+      margin: 20px auto;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    p.sub-title {
+      text-align: left;
+      line-height: 20px;
+      color: #a0a0a0;
+    }
+  }
+  .intell-hr-tab {
+    padding-top: 100px;
+    text-align: center;
+    .tab-title {
+      width: 640px;
+      margin: 40px auto;
+      .title-item {
+        float: left;
+        margin-left: 140px;
+        &:first-child {
+          margin-left: 0;
+        }
+        .box-img {
+          position: relative;
+          padding: 20px;
+          width:120px;
+          height: 120px;
+          border-radius: 50%;
+          color: #fff;
+          background: #c8c8c8;
+          transition: all linear 0.3s;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer;
+          img {
+            margin-bottom: 5px;
+          }
+        }
+        .icon-up-arrow {
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          margin-left: -12px;
+          display: block;
+          border: 12px solid transparent;
+        }
+        &.active {
+          .box-img {
+            background: #063E94;
+          }
+          .icon-up-arrow {
+            border-bottom-color: #063E94;
+          }
+        }
+      }
+    }
+    .tab-content {
+      width: 100%;
+      text-align: center;
+      .content-item {
+        width: 100%;
+        padding: 70px 0;
+        background: #063E94;
+        height: 300px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+        display: none;
+        &.active {
+          display: block;
+        }
+        p {
+          margin-top: 40px;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  .main-pro {
+    padding: 100px 0;
+    text-align: center;
+    .panel-body {
+      margin: 0 auto;
+      margin-top: 40px;
+      width: 1210px;
+      text-align: left;
+      .left-img {
+        float: left;
+        width: 700px;
+        height: 385px;
+      }
+      .right-img {
+        float: left;
+        position: relative;
+        width: 510px;
+        height: 385px;
+        .word {
+          padding: 20px 38px;
+          position: absolute;
+          width: 390px;
+          height: 100px;
+          background: linear-gradient(to right, #5D26CB, #C86DD7);
+          color: #fff;
+          h2 {
+            margin-bottom: 10px;
+            font-size: 28px;
+          }
+          &.one {
+            top: 20px;
+            left: -10px;
+          }
+          &.two {
+            top: 140px;
+            left: 120px;
+          }
+        }
+        .call-audio {
+          position: absolute;
+          bottom: 36px;
+          right: 60px;
+          height: 50px;
+          width: 400px;
+        }
+        /**
+* Add the correct display in IE 9-.
+*/
+
+        audio,
+        video {
+          display: inline-block;
+        }
+
+        /**
+         * Add the correct display in iOS 4-7.
+         */
+
+        audio:not([controls]) {
+          display: none;
+          height: 0;
+        }
+      }
+    }
+  }
+  .ourpro {
+    width: 100%;
+    height: 500px;
+    background: url(../images/hr_service/bg1.png) no-repeat center center;
+    .panel-head {
+      .short-line {
+        background-color: #fff;
+      }
+    }
+    .panel-body {
+      margin-top: 40px;
+      .eff-item {
+        float: left;
+        width: 240px;
+        height: 280px;
+        padding: 40px 0 45px;
+        margin-left: 30px;
+        background: #fff;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .up-box {
+        height: 85px;
+        .num {
+          font-size: 64px;
+          line-height: 85px;
+        }
+        .icon-arrow {
+          display: inline-block;
+          vertical-align: top;
+          width: 20px;
+          height: 30px;
+          background: url(../images/hr_service/AI8.png) no-repeat center center;
+          &.down {
+            background-image: url(../images/hr_service/AI9.png);
+          }
+        }
+      }
+      .mid-box {
+        margin: 40px 0 20px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .down-box {
+        font-weight: bold;
+        color: #a0a0a0;
+        span {
+          color: #063E94;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.recruit_ad_wrap {
+  .panel-head {
+    .short-line {
+      background: #00B9FE;
+    }
+  }
+  .box1 {
+    padding: 100px 0;
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .box2 {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 60px;
+    width: 100%;
+    max-width: 1440px;
+    height: 680px;
+    background-color: #f9f9f9;
+    .panel-body {
+      position: relative;
+      a.default-btn {
+        position: absolute;
+        width: 180px;
+        height: 40px;
+        left: 0;
+        bottom: -60px;
+        border: none;
+      }
+    }
+    .zhaopin3,
+    .zhaopin4 {
+      position: absolute;
+      right: 0;
+      top: 60px;
+    }
+    .zhaopin3 {
+      top: 130px;
+      right: 497px;
+    }
+  }
+  .box3 {
+    padding: 100px 0;
+    text-align: center;
+    img {
+      margin-top: 40px;
+    }
+  }
+}
+.advice_wrap {
+  .box1 {
+    padding: 60px 0 100px;
+    text-align: center;
+    .panel-body {
+      .up {
+        margin: 40px auto;
+        line-height: 30px;
+        font-size: 20px;
+        span {
+          color: #FF9E00;
+        }
+      }
+      .down {
+        h5 {
+          margin-bottom: 10px;
+          color: #656565;
+        }
+      }
+    }
+  }
+  .box2 {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    .boxes {
+      margin: 0 auto;
+      margin-top: 40px;
+      width: 960px;
+      .box-item {
+        float: left;
+        width: 280px;
+        margin-left:60px;
+        img {
+          width: 280px;
+          height: 360px;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        p {
+          margin-bottom: 30px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .box3 {
+    padding: 100px 0;
+    text-align: center;
+    .reports {
+      margin: 0 auto;
+      margin-top: 40px;
+      width: 680px;
+      .report-item {
+        float: left;
+        width: 270px;
+        margin-left:140px;
+        img {
+          width: 270px;
+          height: 360px;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        p {
+          margin-bottom: 30px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .box4 {
+    padding-top: 50px;
+    width: 100%;
+    height: 330px;
+    background: url(../images/hr_service/bg4.png) no-repeat center center;
+    text-align: center;
+    ul {
+      margin-top: 40px;
+      li {
+        font-size: 16px;
+        color: #fff;
+        line-height: 28px;
+      }
+    }
+  }
+}
