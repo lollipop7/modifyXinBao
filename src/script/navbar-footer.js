@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Created by lollipop on 2018/8/31
  */
@@ -5,44 +7,74 @@
 layui.config({
     base: '../js/' //假设这是你存放拓展模块的根目录
 }).extend({ //设定模块别名
-    nicescroll: 'jquery.nicescroll'
-    ,utilset: 'utilset' //相对于上述 base 目录的子目录
+    nicescroll: 'jquery.nicescroll',
+    utilset: 'utilset' //相对于上述 base 目录的子目录
 });
 
-layui.use(["jquery", "element", "layer", "nicescroll", "utilset"], function(){
-    const element = layui.element
-        ,$ = layui.jquery
-        ,layer = layui.layer
-        ,utilset = layui.utilset;
+layui.use(["jquery", "element", "layer", "nicescroll", "utilset"], function () {
+    var element = layui.element,
+        $ = layui.jquery,
+        layer = layui.layer,
+        utilset = layui.utilset;
 
-    const navBar = $('#nav-list')
+    var navBar = $('#nav-list')
         ,pattern = location.href
-        ,curHash = location.hash
-    //     ,navArr = ['index', 'corp_welfare', 'hr_service', 'fubao_mall', 'about_us']
-    //     ,navList = navBar.find('.layui-nav-item');
-    // navArr.forEach(function(item, index){
-    //     let matches = pattern.match(item)
-    //     if(matches){
-    //         navList.each(function(i, n){
-    //             if(matches[0] == $(n).data("key")){
-    //                 $(navList[i]).addClass('layui-this').siblings().removeClass('.layui-this');
-    //             }
-    //         })
-    //     }
-    // });
-    let iNow = 0;
-    $('#tabs').find('.layui-tab-title li').eq(iNow).addClass('layui-this').siblings().removeClass('layui-this');
-    $('#tabs').find('.layui-tab-content .layui-tab-item').eq(iNow).addClass('layui-show').siblings().removeClass('layui-show');
-    $('#corp_welfare').find('.layui-nav-child dd').click(function(){
-        // $(this).addClass('layui-this').siblings().removeClass('layui-this');
-        iNow= $(this).index();
+        ,navArr = ['index', 'corp_welfare', 'hr_service', 'fubao_mall', 'about_us']
+        ,matches = []
+        ,selector = ''
+    navArr.forEach(function(item, index){
+        matches = pattern.match(item);
+        if(matches){
+            selector = matches[0];
+            navBar.find("li[data-key = "+ selector +"]").addClass('layui-this').siblings().removeClass('.layui-this');
+        }
+    });
+
+// 切换tab
+    function changeTab (iNow) {
+        $('#corp_welfare').find('.layui-nav-child dd').eq(iNow).addClass('layui-this').siblings().removeClass('layui-this');
         $('#tabs').find('.layui-tab-title li').eq(iNow).addClass('layui-this').siblings().removeClass('layui-this');
         $('#tabs').find('.layui-tab-content .layui-tab-item').eq(iNow).addClass('layui-show').siblings().removeClass('layui-show');
+    }
+
+    if(location.hash =="#flex_benifit"){
+        changeTab(0)
+    }else if(location.hash =="#staff_ME"){
+        changeTab(1)
+    }else if(location.hash =="#insurance"){
+        changeTab(2)
+    }else if(location.hash =="#festival_prc"){
+        changeTab(3)
+    }else if(location.hash =="#staff_incent"){
+        changeTab(4)
+    }else if(location.hash =="#staff_incent"){
+        changeTab(5)
+    }
+
+    // 只在corp_welfare.html页面的时候起作用？
+    $('#corp_welfare').find('.layui-nav-child dd').click(function (e) {
+        // console.log('进入.....')
+        let iNow = $(this).index();
+
+        $('#tabs').find('.layui-tab-title li').eq(iNow).addClass('layui-this').siblings().removeClass('layui-this');
+        $('#tabs').find('.layui-tab-content .layui-tab-item').eq(iNow).addClass('layui-show').siblings().removeClass('layui-show');
+
+        navArr.forEach(function(item, index){
+            matches = pattern.match(item);
+            if(matches){
+                selector = matches[0];
+                navBar.find("li[data-key = "+ selector +"]").addClass('layui-this').siblings().removeClass('.layui-this');
+            }
+        });
     });
 
     $("body").niceScroll();
 
     var gotop = $('.icon-gotop');
+
+    var target = 0,
+        leader = 0,
+        timer = null;
 
     document.onscroll = function () {
         if (utilset.scroll().top > 600) {
@@ -55,29 +87,26 @@ layui.use(["jquery", "element", "layer", "nicescroll", "utilset"], function(){
             gotop.fadeOut();
         }
     };
-    let target = 0,
-        leader = 0,
-        timer = null;
+
     gotop.click(function () {
-            clearInterval(timer);
-            timer = setInterval(function () {
-                // target 目标值 leader初始时是滚动的高度
-                let step = (target - leader) / 10;
-                // 如果大于0向上取整小于0向下取整
-                step = step > 0 ? Math.ceil(step) : Math.floor(step);
-                // leader发生改变
-                leader = leader + step;
-                // 返回到哪一个地方
-                window.scrollTo(0, leader);
-                if (leader == target) {
-                    clearInterval(timer);
-                }
-            }, 30);
-        }
-    )
+        clearInterval(timer);
+        timer = setInterval(function () {
+            // target 目标值 leader初始时是滚动的高度
+            var step = (target - leader) / 10;
+            // 如果大于0向上取整小于0向下取整
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            // leader发生改变
+            leader = leader + step;
+            // 返回到哪一个地方
+            window.scrollTo(0, leader);
+            if (leader == target) {
+                clearInterval(timer);
+            }
+        }, 30);
+    });
 
     $('.btn-contactus, #openForm1, #openForm2, #openForm3, #openForm4').click(function () {
-        const index = layer.open({
+        var index = layer.open({
             type: 1, //页面层
             shade: 0.8,
             title: '联系我们',
@@ -85,7 +114,6 @@ layui.use(["jquery", "element", "layer", "nicescroll", "utilset"], function(){
             scrollbar: false,
             content: $('#form-fill') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
         });
-
 
         //监听提交
         form.on('submit(immidate)', function (data) {
@@ -107,5 +135,4 @@ layui.use(["jquery", "element", "layer", "nicescroll", "utilset"], function(){
             //     });
         });
     });
-
 });

@@ -17,34 +17,64 @@ layui.use(["jquery", "element", "layer", "nicescroll", "utilset"], function () {
         layer = layui.layer,
         utilset = layui.utilset;
 
-    var navBar = $('#nav-list'),
-        pattern = location.href,
-        curHash = location.hash;
-    //     ,navArr = ['index', 'corp_welfare', 'hr_service', 'fubao_mall', 'about_us']
-    //     ,navList = navBar.find('.layui-nav-item');
-    // navArr.forEach(function(item, index){
-    //     let matches = pattern.match(item)
-    //     if(matches){
-    //         navList.each(function(i, n){
-    //             if(matches[0] == $(n).data("key")){
-    //                 $(navList[i]).addClass('layui-this').siblings().removeClass('.layui-this');
-    //             }
-    //         })
-    //     }
-    // });
-    var iNow = 0;
-    $('#tabs').find('.layui-tab-title li').eq(iNow).addClass('layui-this').siblings().removeClass('layui-this');
-    $('#tabs').find('.layui-tab-content .layui-tab-item').eq(iNow).addClass('layui-show').siblings().removeClass('layui-show');
-    $('#corp_welfare').find('.layui-nav-child dd').click(function () {
-        // $(this).addClass('layui-this').siblings().removeClass('layui-this');
-        iNow = $(this).index();
+    var navBar = $('#nav-list')
+        ,pattern = location.href
+        ,navArr = ['index', 'corp_welfare', 'hr_service', 'fubao_mall', 'about_us']
+        ,matches = []
+        ,selector = ''
+    navArr.forEach(function(item, index){
+        matches = pattern.match(item);
+        if(matches){
+            selector = matches[0];
+            navBar.find("li[data-key = "+ selector +"]").addClass('layui-this').siblings().removeClass('.layui-this');
+        }
+    });
+
+// 切换tab
+    function changeTab (iNow) {
+        $('#corp_welfare').find('.layui-nav-child dd').eq(iNow).addClass('layui-this').siblings().removeClass('layui-this');
         $('#tabs').find('.layui-tab-title li').eq(iNow).addClass('layui-this').siblings().removeClass('layui-this');
         $('#tabs').find('.layui-tab-content .layui-tab-item').eq(iNow).addClass('layui-show').siblings().removeClass('layui-show');
+    }
+
+    if(location.hash =="#flex_benifit"){
+        changeTab(0)
+    }else if(location.hash =="#staff_ME"){
+        changeTab(1)
+    }else if(location.hash =="#insurance"){
+        changeTab(2)
+    }else if(location.hash =="#festival_prc"){
+        changeTab(3)
+    }else if(location.hash =="#staff_incent"){
+        changeTab(4)
+    }else if(location.hash =="#staff_incent"){
+        changeTab(5)
+    }
+
+    // 只在corp_welfare.html页面的时候起作用？
+    $('#corp_welfare').find('.layui-nav-child dd').click(function (e) {
+        // console.log('进入.....')
+        let iNow = $(this).index();
+
+        $('#tabs').find('.layui-tab-title li').eq(iNow).addClass('layui-this').siblings().removeClass('layui-this');
+        $('#tabs').find('.layui-tab-content .layui-tab-item').eq(iNow).addClass('layui-show').siblings().removeClass('layui-show');
+
+        navArr.forEach(function(item, index){
+            matches = pattern.match(item);
+            if(matches){
+                selector = matches[0];
+                navBar.find("li[data-key = "+ selector +"]").addClass('layui-this').siblings().removeClass('.layui-this');
+            }
+        });
     });
 
     $("body").niceScroll();
 
     var gotop = $('.icon-gotop');
+
+    var target = 0,
+        leader = 0,
+        timer = null;
 
     document.onscroll = function () {
         if (utilset.scroll().top > 600) {
@@ -57,9 +87,7 @@ layui.use(["jquery", "element", "layer", "nicescroll", "utilset"], function () {
             gotop.fadeOut();
         }
     };
-    var target = 0,
-        leader = 0,
-        timer = null;
+
     gotop.click(function () {
         clearInterval(timer);
         timer = setInterval(function () {

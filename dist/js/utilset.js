@@ -6,13 +6,13 @@
 layui.define(['jquery'], function (exports) {
     var $ = layui.jquery;
     var obj = {
-        scroll: function scroll() {
+        scroll: function () {
             return {
                 top: document.documentElement.scorllTop || document.body.scorllTop || window.pageYOffset || 0,
                 left: document.documentElement.scorllLeft || document.body.scorllLeft || window.pageXOffset || 0
             };
         },
-        animateEle: function animateEle(ele, json, fn) {
+        animateEle: function (ele, json, fn) {
             var that = this;
             clearInterval(ele.timer);
             ele.timer = setInterval(function () {
@@ -48,7 +48,7 @@ layui.define(['jquery'], function (exports) {
                 }
             }, 50);
         },
-        getStyle: function getStyle(ele, attr) {
+        getStyle: function (ele, attr) {
             // 获取计算后样式
             return (ele.currentStyle ? ele.currentStyle : window.getComputedStyle(ele, null))[attr];
         }
