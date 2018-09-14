@@ -2,21 +2,22 @@
 <!DOCTYPE html>
 <html lang = 'en'>
 <head>
-    <!--created by lollipop 2018/8/31-->
+    <!--created by lollipop 2018/9/7-->
+<!--created by lollipop 2018/8/31-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>
     
-        
     
-        
     
-        
     
-        
     
-        
+    
+    
+    
+    咨询服务
+    
     
 </title>
 <link rel="stylesheet" href="../vendor/layui-src/css/layui.css">
@@ -29,7 +30,7 @@
     <div class="nav-container clearfix">
         <div class="nav-logo pull-left">
             <h1>
-                <a href="./index.html)">9151薪宝</a>
+                <a href="./index.html">9151薪宝</a>
             </h1>
         </div>
         <div class="nav-modal pull-right"><button class="layui-btn btn-contactus">联系我们</button></div>
@@ -49,13 +50,13 @@
             <li class="layui-nav-item" id="hr_service" data-key="hr_service">
                 <a href="./AI.html">人力资源服务</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                    <dd><a href="./recruit_ad.html">招聘&广告</a></dd>
-                    <dd><a href="http://www.51jrq.com/topics/51cloud/">51招聘云</a></dd>
-                    <dd><a href="./AI.html">AI机器人</a></dd>
-                    <dd><a href="./advice.html">咨询服务</a></dd>
+                    <dd data-key="recruit_ad"><a href="./recruit_ad.html">招聘&广告</a></dd>
+                    <dd><a href="http://www.51jrq.com/topics/51cloud/" target="_blank">51招聘云</a></dd>
+                    <dd data-key="AI"><a href="./AI.html">AI机器人</a></dd>
+                    <dd data-key="advice"><a href="./advice.html">咨询服务</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item" data-key="staff_incent"><a href="http://www.9151fubao.com/">福宝商城</a></li>
+            <li class="layui-nav-item" data-key="staff_incent"><a href="http://www.9151fubao.com/" target="_blank">福宝商城</a></li>
             <li class="layui-nav-item" data-key="about_us"><a href="javascript:void(0)">关于我们</a></li>
         </ul>
 
@@ -63,28 +64,31 @@
 </div>
 <!--created by lollipop 2018/9/5-->
 <div class="form-fill" id="form-fill">
-    <form class="layui-form">
+    <form class="layui-form" lay-filter="contact">
         <div class="layui-form-item">
-            <input type="text" name="companyname" required  lay-verify="required" placeholder="企业名称" autocomplete="off" class="layui-input">
+            <input type="text" name="corpname" required  lay-verify="required|corpname" placeholder="企业名称" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-form-item">
-            <input type="text" name="indutry" required  lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
+            <input type="text" name="demand" required  lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-form-item">
-            <input type="text" name="username" placeholder="姓名" autocomplete="off" class="layui-input">
+            <input type="text" name="linkman" required  lay-verify="required|linkman" placeholder="姓名" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-form-item">
-            <input type="text" name="phonenumber" placeholder="电话" autocomplete="off" class="layui-input">
+            <input type="text" name="telephone" required  lay-verify="required|phone|number" placeholder="电话" autocomplete="off" class="layui-input">
         </div>
+        <input type="text" name="type" hidden value="薪宝网站薪酬优化咨询">
+        <input type="text" name="email" hidden value="-">
+        <input type="text" name="mobile" hidden value="-">
         <div class="layui-form-item" style="text-align: center;">
-            <button class="layui-btn submit-btn" lay-submit lay-filter="formContactus">提交</button>
+            <button class="layui-btn submit-btn" lay-submit lay-filter="submitInfos">提交</button>
         </div>
     </form>
     <div class="tel">或拨打 <span>400-8856-112</span> 了解更多信息</div>
 </div>
 <div class="form-succ" id="form-succ">
     <div class="icon-gou">
-        <img src="/img/fixedPlugin/gou.png" alt="信息提交成功">
+        <img src="../images/gou.png" alt="信息提交成功">
         <h3>信息提交成功</h3>
     </div>
     <p>您的信息已成功提交到公司后台，我们会尽快安排专业顾问与您联系，非常感谢您的配合，祝您生活愉快！</p>
@@ -107,7 +111,7 @@
             </div>
             <div class="down">
                 <h5>合作伙伴</h5>
-                <img src="../images/hr_service/zixun1.png" alt="" style="width: 596px; height: 50px;">
+                <img src="./images/hr_service/zixun1.png" alt="" style="width: 596px; height: 50px;">
             </div>
         </div>
     </div>
@@ -119,16 +123,16 @@
         </div>
         <ul class="boxes clearfix">
             <li class="box-item">
-                <img src="../images/hr_service/zixun2.png" alt="">
+                <img src="./images/hr_service/zixun2.png" alt="">
                 <p>金融行业薪酬报告</p>
             </li>
             <li class="box-item">
-                <img src="../images/hr_service/zixun3.png" alt="">
+                <img src="./images/hr_service/zixun3.png" alt="">
                 <p>金融行业薪酬报告</p>
                 <p>（互金）</p>
             </li>
             <li class="box-item">
-                <img src="../images/hr_service/zixun4.png" alt="">
+                <img src="./images/hr_service/zixun4.png" alt="">
                 <p>金融行业薪酬报告</p>
                 <p>（财富管理）</p>
             </li>
@@ -142,11 +146,11 @@
         </div>
         <ul class="reports clearfix">
             <li class="report-item">
-                <img src="../images/hr_service/zixun5.png" alt="">
+                <img src="./images/hr_service/zixun5.png" alt="">
                 <p>新兴金融人才战略蓝皮书</p>
             </li>
             <li class="report-item">
-                <img src="../images/hr_service/zixun6.png" alt="">
+                <img src="./images/hr_service/zixun6.png" alt="">
                 <p>金融人才指数</p>
             </li>
         </ul>
@@ -172,27 +176,30 @@
         <h2>进一步了解产品</h2>
         <div class="subhead">contact us</div>
     </div>
-    <div class="layui-form">
+    <div class="layui-form" lay-verify="pageContact">
         <ul>
             <li>
                 <div class="layui-inline">
-                    <input type="text" name="companyname" required lay-verify="required" placeholder="企业名称" autocomplete="off" class="layui-input">
+                    <input type="text" name="corpname" required  lay-verify="required|corpname" placeholder="企业名称" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-inline">
-                    <input type="text" name="indutry" required lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
+                    <input type="text" name="demand" required  lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
                 </div>
             </li>
             <li>
                 <div class="layui-inline">
-                    <input type="text" name="username" required lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input">
+                    <input type="text" name="linkman" required  lay-verify="required|linkman" placeholder="姓名" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-inline">
-                    <input type="text" name="phonenumber" required lay-verify="required" placeholder="电话" autocomplete="off" class="layui-input">
+                    <input type="text" name="telephone" required  lay-verify="required|phone" placeholder="电话" autocomplete="off" class="layui-input">
                 </div>
             </li>
         </ul>
+        <input type="text" name="type" hidden value="薪宝网站薪酬优化咨询">
+        <input type="text" name="email" hidden value="-">
+        <input type="text" name="mobile" hidden value="-">
         <div>
-            <button class="layui-btn" lay-submit lay-filter="formContactus">提交</button>
+            <button class="layui-btn" lay-submit lay-filter="pageSubmit">提交</button>
         </div>
     </div>
 </div>
@@ -205,13 +212,13 @@
     <div class="footer_box clearfix">
         <div class="pull-left">
             <div class="footer_left_img">
-                <img src="../images/footer_icon01.jpg" width="108" height="40">
+                <img src="./images/footer_icon01.jpg" width="108" height="40">
             </div>
             <p>©2017 9151xinbao.com</p>
             <p>沪ICP备14045153号-2</p>
         </div>
         <div class="pull-right">
-            <div id="bottomQQ" style="height:94px;width:396px;background-image:url(../images/footer_right.jpg);">
+            <div id="bottomQQ" style="height:94px;width:396px;background-image:url(./images/footer_right.jpg);">
                 <div style="padding-top: 27px;padding-right: 10px;">
                 </div>
             </div>

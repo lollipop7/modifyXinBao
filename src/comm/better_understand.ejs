@@ -9,23 +9,26 @@
         <ul>
             <li>
                 <div class="layui-inline">
-                    <input type="text" name="companyname" required lay-verify="required" placeholder="企业名称" autocomplete="off" class="layui-input">
+                    <input type="text" name="corpname" required  lay-verify="required|corpname" placeholder="企业名称" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-inline">
-                    <input type="text" name="indutry" required lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
+                    <input type="text" name="demand" required  lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
                 </div>
             </li>
             <li>
                 <div class="layui-inline">
-                    <input type="text" name="username" required lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input">
+                    <input type="text" name="linkman" required  lay-verify="required|linkman" placeholder="姓名" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-inline">
-                    <input type="text" name="phonenumber" required lay-verify="required" placeholder="电话" autocomplete="off" class="layui-input">
+                    <input type="text" name="telephone" required  lay-verify="required|phone" placeholder="电话" autocomplete="off" class="layui-input">
                 </div>
             </li>
         </ul>
+        <input type="text" name="type" hidden value="薪宝网站薪酬优化咨询">
+        <input type="text" name="email" hidden value="-">
+        <input type="text" name="mobile" hidden value="-">
         <div>
-            <button class="layui-btn" lay-submit lay-filter="formContactus">提交</button>
+            <button class="layui-btn" lay-submit lay-filter="pageSubmit">提交</button>
         </div>
     </div>
 </div>

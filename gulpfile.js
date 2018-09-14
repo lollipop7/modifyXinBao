@@ -11,12 +11,10 @@ const fs = require('fs'),
     sassDir = join(srcDir, 'sass'),
     scriptDir = join(srcDir, 'script'),
     distDir = join(__dirname, 'dist'),
-    mainDir = join(distDir, 'mainDir'),
     hrServiceDir = join(distDir, 'hrServiceDir'),
     _ = require('lodash');
 
-const mainPages = ['index', 'corp_welfare', 'hr_service', 'about_us'];
-const welfarePages = ['flex_benifit', 'staff_ME', 'insurance', 'festival_prc', 'staff_incent', 'exhibition'];
+const mainPages = ['index', 'corp_welfare', 'about_us'];
 const hrServicePages = ['recruit_ad', 'AI', 'advice'];
 
 //compile ejs to html
@@ -28,16 +26,13 @@ gulp.task('maintpl', () => {
             filename: join(ejsDir, `${item}/${item}.ejs`),
             dataJson: _.extend({}, require(join(srcDir, `data/dataJson.js`)), {filename: item})
         });
-        if(!fs.existsSync(mainDir)){
-            fs.mkdirSync(mainDir)
-        }else{
-            fs.writeFile(join(mainDir, `${item}.html`),
+
+            fs.writeFile(join(distDir, `${item}.html`),
                 htmlTemplate, err=>{
                     if(err) throw new Error(err);
                     console.log(`${item} is saved !`);
                 }
             )
-        }
 
     })
 });
@@ -56,16 +51,13 @@ gulp.task('hrServicetpl', () => {
             filename: join(ejsDir, `${item}/${item}.ejs`),
             dataJson: _.extend({}, require(join(srcDir, `data/dataJson.js`)), {filename: item})
         });
-        if(!fs.existsSync(mainDir)){
-            fs.mkdirSync(mainDir)
-        }else{
-            fs.writeFile(join(mainDir, `${item}.html`),
+
+            fs.writeFile(join(distDir, `${item}.html`),
                 htmlTemplate, err=>{
                     if(err) throw new Error(err);
                     console.log(`${item} is saved !`);
                 }
             )
-        }
 
     })
 });

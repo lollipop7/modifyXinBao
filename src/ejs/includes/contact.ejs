@@ -1,27 +1,30 @@
 <!--created by lollipop 2018/9/5-->
 <div class="form-fill" id="form-fill">
-    <form class="layui-form">
+    <form class="layui-form" lay-filter="contact">
         <div class="layui-form-item">
-            <input type="text" name="companyname" required  lay-verify="required" placeholder="企业名称" autocomplete="off" class="layui-input">
+            <input type="text" name="corpname" required  lay-verify="required|corpname" placeholder="企业名称" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-form-item">
-            <input type="text" name="indutry" required  lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
+            <input type="text" name="demand" required  lay-verify="required" placeholder="企业性质（如互联网金融）" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-form-item">
-            <input type="text" name="username" placeholder="姓名" autocomplete="off" class="layui-input">
+            <input type="text" name="linkman" required  lay-verify="required|linkman" placeholder="姓名" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-form-item">
-            <input type="text" name="phonenumber" placeholder="电话" autocomplete="off" class="layui-input">
+            <input type="text" name="telephone" required  lay-verify="required|phone|number" placeholder="电话" autocomplete="off" class="layui-input">
         </div>
+        <input type="text" name="type" hidden value="薪宝网站薪酬优化咨询">
+        <input type="text" name="email" hidden value="-">
+        <input type="text" name="mobile" hidden value="-">
         <div class="layui-form-item" style="text-align: center;">
-            <button class="layui-btn submit-btn" lay-submit lay-filter="formContactus">提交</button>
+            <button class="layui-btn submit-btn" lay-submit lay-filter="submitInfos">提交</button>
         </div>
     </form>
     <div class="tel">或拨打 <span>400-8856-112</span> 了解更多信息</div>
 </div>
 <div class="form-succ" id="form-succ">
     <div class="icon-gou">
-        <img src="/img/fixedPlugin/gou.png" alt="信息提交成功">
+        <img src="../images/gou.png" alt="信息提交成功">
         <h3>信息提交成功</h3>
     </div>
     <p>您的信息已成功提交到公司后台，我们会尽快安排专业顾问与您联系，非常感谢您的配合，祝您生活愉快！</p>
